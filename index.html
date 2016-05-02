@@ -11,6 +11,10 @@
         <link rel="import" href="bower_components/paper-styles/shadow.html">
         <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
         <link rel="import" href="bower_components/neon-animation/neon-animated-pages.html">
+        <link rel="import" href="bower_components/neon-animation/animations/fade-in-animation.html">
+        <link rel="import" href="bower_components/neon-animation/animations/slide-up-animation.html">
+        <link rel="import" href="bower_components/neon-animation/animations/fade-out-animation.html">
+        <link rel="import" href="bower_components/neon-animation/animations/slide-down-animation.html">
 
         <style is="custom-style">
             body {
@@ -36,7 +40,7 @@
             }
         </style>
     </head>
-    <body class="fullbleed">
+    <body unresolved>
         <paper-header-panel>
             <paper-toolbar class="blue">
                 <span class="title">Alex Dueppen</span>
@@ -47,10 +51,10 @@
                 </paper-tabs>
             </paper-toolbar>
             <div class="content">
-                <neon-animated-pages class="content" selected="{{selected}}">
-                    <div>Home</div>
-                    <div>Projects</div>
-                    <div>About</div>
+                <neon-animated-pages class="content" selected="{{selected}}" entry-animation="slide-up-animation" exit-animation="fade-out-animation">
+                    <neon-animatable>Home</neon-animatable>
+                    <neon-animatable>Projects</neon-animatable>
+                    <neon-animatable>About</neon-animatable>
                 </neon-animated-pages>
             </div>
         </paper-header-panel>
