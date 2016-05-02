@@ -1,0 +1,24 @@
+{
+  "name": "adueppen.github.io",
+  "homepage": "https://adueppen.github.io",
+  "authors": [
+    "Alex Dueppen"
+  ],
+  "description": "Personal website revamped",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "paper-elements": "PolymerElements/paper-elements#^1.0.7",
+    "iron-elements": "PolymerElements/iron-elements#^1.0.10",
+    "neon-elements": "PolymerElements/neon-elements#^1.0.0"
+  }
+}
