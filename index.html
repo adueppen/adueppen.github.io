@@ -15,6 +15,8 @@
         <link rel="import" href="bower_components/neon-animation/animations/slide-up-animation.html">
         <link rel="import" href="bower_components/neon-animation/animations/fade-out-animation.html">
         <link rel="import" href="bower_components/neon-animation/animations/slide-down-animation.html">
+        <link rel="import" href="bower_components/neon-animation/animations/slide-from-bottom-animation.html">
+        <link rel="import" href="bower_components/paper-card/paper-card.html">
 
         <style is="custom-style">
             body {
@@ -36,7 +38,10 @@
                 --paper-tab-ink: #fff;
             }
             neon-animated-pages {
-                height: 100%;
+                height: 20%;
+            }
+            neon-animatable {
+                margin: 8px;
             }
         </style>
     </head>
@@ -51,8 +56,10 @@
                 </paper-tabs>
             </paper-toolbar>
             <div class="content">
-                <neon-animated-pages class="content" selected="{{selected}}" entry-animation="slide-up-animation" exit-animation="fade-out-animation">
-                    <neon-animatable>Home</neon-animatable>
+                <neon-animated-pages class="content" entry-animation="slide-from-bottom-animation" exit-animation="fade-out-animation">
+                    <neon-animatable>
+                        <paper-card class="middle" heading="Welcome!"></paper-card>
+                    </neon-animatable>
                     <neon-animatable>Projects</neon-animatable>
                     <neon-animatable>About</neon-animatable>
                 </neon-animated-pages>

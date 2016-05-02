@@ -1,0 +1,49 @@
+<html>
+    <head>
+       <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=no">
+        <title>Alex Dueppen</title>
+        <link rel="import" href="bower_components/webcomponentsjs/webcomponents-lite.min.js">
+        <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
+        <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
+        <link rel="import" href="bower_components/paper-card/paper-card.html">
+        <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+        <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+        <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+
+        <style is="custom-style">
+            body {
+                margin: 0;
+                font-family: 'Roboto', sans-serif;
+            }
+            paper-toolbar.blue {
+                --paper-toolbar-background: #2196f3;
+            }
+            .flex-center-justified {
+                @apply(--layout-horizontal);
+                @apply(--layout-center-justified);
+            }
+            paper-card {
+                width: 75%;
+                --paper-card-header-color: #fff;
+            }
+            .content {
+                margin-top: 64px;
+            }
+        </style>
+    </head>
+    <body unresolved>
+        <paper-header-panel mode="cover">
+            <paper-toolbar class="blue tall"></paper-toolbar>
+            <div class="content cover flex-center-justified">
+                <paper-card heading="Welcome!" image="images/cover.png" class="white">
+                    <div class="card-content">To get started, check out my Projects or About pages, or the social links below.</div>
+                    <div class="card-actions">
+                        <a href="https://plus.google.com/+adueppen" target="_blank" tabindex="-1"><paper-icon-button src="images/google-plus.svg"></paper-icon-button></a>
+                        <a href="https://github.com/adueppen" target="_blank" tabindex="-1"><paper-icon-button src="images/github-circle.svg"></paper-icon-button></a>
+                        <a href="https://www.reddit.com/user/adueppen" target="_blank" tabindex="-1"><paper-icon-button src="images/reddit.svg"></paper-icon-button></a>
+                    </div>
+                </paper-card>
+            </div>
+        </paper-header-panel>
+    </body>
+</html>
