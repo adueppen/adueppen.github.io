@@ -1,76 +1,44 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=no">
-        <title>Alex Dueppen</title>
-        <link rel="import" href="bower_components/webcomponentsjs/webcomponents-lite.min.js">
-        <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
-        <link rel="import" href="bower_components/paper-header-panel/paper-header-panel.html">
-        <link rel="import" href="bower_components/iron-icons/iron-icons.html">
-        <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
-        <link rel="import" href="bower_components/font-roboto/roboto.html">
-        <link rel="import" href="bower_components/paper-styles/shadow.html">
-        <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
-        <link rel="import" href="bower_components/neon-animation/neon-animated-pages.html">
-        <link rel="import" href="bower_components/neon-animation/animations/fade-in-animation.html">
-        <link rel="import" href="bower_components/neon-animation/animations/slide-up-animation.html">
-        <link rel="import" href="bower_components/neon-animation/animations/fade-out-animation.html">
-        <link rel="import" href="bower_components/neon-animation/animations/slide-down-animation.html">
-        <link rel="import" href="bower_components/neon-animation/animations/slide-from-bottom-animation.html">
-        <link rel="import" href="bower_components/paper-card/paper-card.html">
-
-        <style is="custom-style">
-            body {
-                margin: 0;
-                font-family: 'Roboto', sans-serif;
-            }
-            paper-toolbar.blue {
-                --paper-toolbar-background: #2196f3;
-            }
-            .self-end {
-                @apply(--layout-self-end);
-            }
-            paper-tabs {
-                color: #fff;
-                --paper-tabs-selection-bar-color: #fff;
-                font-weight: bold;
-            }
-            paper-tab {
-                --paper-tab-ink: #fff;
-            }
-            neon-animated-pages {
-                height: 20%;
-            }
-            neon-animatable {
-                margin: 8px;
-            }
-        </style>
+       <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=no">
+       <title>Alex Dueppen</title>
+       <link rel="import" href="bower_components/webcomponentsjs/webcomponents.min.js">
+       <link rel="import" href="bower_components/font-roboto/roboto.html">
+       <link rel="import" href="bower_components/paper-card/paper-card.html">
+       <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+       <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+       <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+       <style is="custom-style">
+           body {
+               font-family: 'Roboto', sans-serif;
+               background-color: #2196f3;
+               height: 100%;
+           }
+           paper-card {
+               --paper-card-header-color: #000;
+           }
+           .content {
+               padding-top: 20%;
+               position: relative;
+               @apply(--layout-horizontal);
+               @apply(--layout-vertical);
+               @apply(--layout-center);
+           }
+       </style>
     </head>
-    <body unresolved>
-        <paper-header-panel>
-            <paper-toolbar class="blue">
-                <span class="title">Alex Dueppen</span>
-                <paper-tabs selected="0" autoselect class="self-end">
-                    <paper-tab>HOME</paper-tab>
-                    <paper-tab>PROJECTS</paper-tab>
-                    <paper-tab>ABOUT</paper-tab>
-                </paper-tabs>
-            </paper-toolbar>
-            <div class="content">
-                <neon-animated-pages class="content" entry-animation="slide-from-bottom-animation" exit-animation="fade-out-animation">
-                    <neon-animatable>
-                        <paper-card class="middle" heading="Welcome!"></paper-card>
-                    </neon-animatable>
-                    <neon-animatable>Projects</neon-animatable>
-                    <neon-animatable>About</neon-animatable>
-                </neon-animated-pages>
+    <body>
+        <div class="content">
+            <paper-card heading="This website is currently in development. Please check back later.">
+            <div class="card-content">
+                For now, check out the links below.
             </div>
-        </paper-header-panel>
-        <script>
-            var items = document.querySelector('paper-tabs');
-            var pages = document.querySelector('neon-animated-pages');
-            items.addEventListener('iron-select', function(){
-                pages.selected = items.selected;
-            });
-        </script>
+            <div class="card-actions">
+                 <a href="https://plus.google.com/+adueppen" target="_blank" tabindex="-1"><paper-icon-button src="images/google-plus.svg"></paper-icon-button></a>
+                 <a href="https://github.com/adueppen" target="_blank" tabindex="-1"><paper-icon-button src="images/github-circle.svg"></paper-icon-button></a>
+                 <a href="https://www.reddit.com/user/adueppen" target="_blank" tabindex="-1"><paper-icon-button src="images/reddit.svg"></paper-icon-button></a>
+            </div>
+        </paper-card>
+        </div>
     </body>
 </html>
