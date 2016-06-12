@@ -10,20 +10,23 @@
        <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
        <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
        <style is="custom-style">
+           html, body {
+               height: 100%;
+           }
            body {
                font-family: 'Roboto', sans-serif;
                background-color: #2196f3;
-               height: 100%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex-direction: column;
+               margin: 0;
            }
            paper-card {
                --paper-card-header-color: #000;
            }
            .content {
-               padding-top: 20%;
-               position: relative;
-               @apply(--layout-horizontal);
-               @apply(--layout-vertical);
-               @apply(--layout-center);
+               margin: 12px;
            }
        </style>
     </head>
