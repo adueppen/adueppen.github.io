@@ -1,0 +1,87 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #2196f3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100vh;
+    -webkit-transition: background 0.35s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition: background 0.35s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.card {
+    border-radius: 2px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+}
+
+.header {
+    position: relative;
+    overflow: hidden;
+}
+
+.title {
+    padding: 16px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+}
+
+.content {
+    padding: 16px;
+    position: relative;
+}
+
+.actions {
+    border-top: 1px solid #e8e8e8;
+    padding: 5px 16px;
+    position: relative;
+}
+
+.actions > a {
+    text-decoration: none;
+}
+
+.flat-button {
+    display: inline-block;
+    position: relative;
+    padding: 8px;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    line-height: 1;
+    width: 40px;
+    height: 40px;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+}
+
+.icon-button {
+    height: 100%;
+    width: 100%;
+    color: #757575;
+    stroke: none;
+}
+
+.page {
+    margin: 12px;
+}

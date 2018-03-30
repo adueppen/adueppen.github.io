@@ -1,48 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-       <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=no">
-       <meta name="theme-color" content="#2196f3">
-       <title>Alex Dueppen</title>
-       <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-       <link rel="import" href="bower_components/font-roboto/roboto.html">
-       <link rel="import" href="bower_components/paper-card/paper-card.html">
-       <link rel="import" href="bower_components/iron-icons/iron-icons.html">
-       <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
-       <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
-       <style is="custom-style">
-           html, body {
-               height: 100%;
-           }
-           body {
-               font-family: 'Roboto', sans-serif;
-               background-color: #2196f3;
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               flex-direction: column;
-               margin: 0;
-           }
-           paper-card {
-               --paper-card-header-color: #000;
-           }
-           .content {
-               margin: 12px;
-           }
-       </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=no">
+        <meta name="theme-color" content="#2196f3">
+        <title>Alex Dueppen</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+        <link rel="stylesheet" href="css/under-construction.css">
     </head>
     <body>
-        <div class="content">
-            <paper-card heading="This website is currently in development. Please check back later.">
-            <div class="card-content">
-                For now, check out the links below.
+        <div class="page">
+            <div class="card">
+                <div class="header">
+                    <div class="title">Hi. This website is under development at the moment.</div>
+                </div>
+                <div class="content">
+                    For now, find me at the links below.
+                </div>
+                <div class="actions">
+                    <a href="https://github.com/adueppen" id="github" target="_blank">
+                        <div class="flat-button"><img src="images/github-circle.svg" alt="Github" class="icon-button"></div>
+                    </a>
+                    <a href="https://www.reddit.com/user/adueppen" id="reddit" target="_blank">
+                        <div class="flat-button"><img src="images/reddit.svg" alt="Reddit" class="icon-button"></div>
+                    </a>
+                    <a href="https://twitter.com/APCSDoneQuick" id="twitter" target="_blank">
+                        <div class="flat-button"><img src="images/twitter.svg" alt="Twitter" class="icon-button"></div>
+                    </a>
+                    <a href="https://www.instagram.com/adueppen/" id="instagram" target="_blank">
+                        <div class="flat-button"><img src="images/instagram.svg" alt="Instagram" class="icon-button"></div>
+                    </a>
+                    <a href="https://plus.google.com/+adueppen" id="google-plus" target="_blank">
+                        <div class="flat-button"><img src="images/google-plus.svg" alt="Google+" class="icon-button"></div>
+                    </a>
+                </div>
             </div>
-            <div class="card-actions">
-                 <a href="https://plus.google.com/+adueppen" target="_blank" tabindex="-1"><paper-icon-button src="images/google-plus.svg"></paper-icon-button></a>
-                 <a href="https://github.com/adueppen" target="_blank" tabindex="-1"><paper-icon-button src="images/github-circle.svg"></paper-icon-button></a>
-                 <a href="https://www.reddit.com/user/adueppen" target="_blank" tabindex="-1"><paper-icon-button src="images/reddit.svg"></paper-icon-button></a>
-            </div>
-        </paper-card>
         </div>
+        <script>
+            function color() {
+                var colors = ["#F44336", "#E91E63", "#9C27B0", "#673AB7", "#3F51B5", "#2196F3", "#03A9F4", "#00BCD4", "#009688", "#4CAF50", "#8BC34A", "#CDDC39", "#FFEB3B", "#FFC107", "#FF9800", "#FF5722", "#795548", "#9E9E9E", "#607D8B"];
+                var color = colors[Math.floor(Math.random() * colors.length)];
+                document.querySelector("meta[name='theme-color']").setAttribute("content", color);
+                document.body.style.backgroundColor = color;
+            }
+            window.onload = color();
+            window.setInterval(color, 10000);
+        </script>
     </body>
 </html>
