@@ -5,17 +5,17 @@
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=no">
         <meta name="theme-color" content="#2196f3">
         <title>Alex Dueppen</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
         <link rel="stylesheet" href="css/under-construction.css">
     </head>
     <body>
         <div class="page">
             <div class="card">
                 <div class="header">
-                    <div class="title">Hi. This website is under development at the moment.</div>
+                    <div class="title">Hi. I like doing cool things with computers.</div>
                 </div>
                 <div class="content">
-                    For now, find me at the links below.
+                    You can find me at the links below, or at <a href="https://ajd.sh" target="_blank" rel="noopener">my new website</a>.
                 </div>
                 <div class="actions">
                     <a href="https://github.com/adueppen" id="github" target="_blank">
@@ -27,10 +27,7 @@
                     <a href="https://twitter.com/AlexDueppen" id="twitter" target="_blank">
                         <div class="flat-button"><img src="images/twitter.svg" alt="Twitter" class="icon-button"></div>
                     </a>
-                    <a href="https://www.instagram.com/adueppen/" id="instagram" target="_blank">
-                        <div class="flat-button"><img src="images/instagram.svg" alt="Instagram" class="icon-button"></div>
-                    </a>
-                    <a href="mailto:contact@adueppen.xyz" id="email" target="_blank">
+                    <a href="mailto:contact@ajd.sh" id="email" target="_blank">
                         <div class="flat-button"><img src="images/email.svg" alt="Email" class="icon-button"></div>
                     </a>
                 </div>
@@ -38,8 +35,8 @@
         </div>
         <script>
             function color() {
-                var colors = ["#F44336", "#E91E63", "#9C27B0", "#673AB7", "#3F51B5", "#2196F3", "#03A9F4", "#00BCD4", "#009688", "#4CAF50", "#8BC34A", "#CDDC39", "#FFEB3B", "#FFC107", "#FF9800", "#FF5722", "#795548", "#9E9E9E", "#607D8B"];
-                var color = colors[Math.floor(Math.random() * colors.length)];
+                const colors = ["#F44336", "#E91E63", "#9C27B0", "#673AB7", "#3F51B5", "#2196F3", "#03A9F4", "#00BCD4", "#009688", "#4CAF50", "#8BC34A", "#CDDC39", "#FFEB3B", "#FFC107", "#FF9800", "#FF5722", "#795548", "#9E9E9E", "#607D8B"];
+                const color = colors[Math.floor(Math.random() * colors.length)];
                 document.querySelector("meta[name='theme-color']").setAttribute("content", color);
                 document.body.style.backgroundColor = color;
             }
